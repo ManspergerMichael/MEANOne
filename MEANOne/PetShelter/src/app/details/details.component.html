@@ -1,0 +1,20 @@
+<a [routerLink]="['']">Home</a>
+<h3>Details about {{pet.name}}</h3>
+
+Type: {{pet.type}}<br>
+Description {{pet.description}}<br>
+Skill 1: {{pet.skill1}}<br>
+Skill 2: {{pet.skill2}}<br>
+Skill 3: {{pet.skill3}}<br>
+likes : {{pet.likes}}<br>
+
+<button (click)="adopt()">Adopt</button>
+<button *ngIf="likeFlag" (click)="like()">Like</button>
+
+<div *ngIf="messages">
+    <ul>
+        <li *ngFor="let message of messages">
+            {{message}}
+        </li>
+    </ul>
+</div>

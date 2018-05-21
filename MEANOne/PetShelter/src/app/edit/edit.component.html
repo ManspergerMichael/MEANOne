@@ -1,0 +1,12 @@
+<h3>Edit a pet</h3>
+
+<form (submit)=edit($event)>
+  Name : <input type="text" name="name" value="{{pet.name}}" [(ngModel)]='pet.name'><br>
+  Type : <input type="text" name="type" value="{{pet.type}}" [(ngModel)]='pet.type'><br>
+  Description : <input type="text" name="description" value="{{pet.description}}" [(ngModel)]='pet.description'><br>
+  Skill 1 : <input type="text" name="skill1" value="{{pet.skill1}}" [(ngModel)]='pet.skill1'><br>
+  Skill 2 : <input type="text" name="skill2" value="{{pet.skill2}}" [(ngModel)]='pet.skill2'><br>
+  Skill 3 : <input type="text" name="skill3" value="{{pet.skill3}}" [(ngModel)]='pet.skill3'><br>
+  <input type="submit" value="Edit Pet">
+  <button [routerLink]="['/pets']">Cancel</button>
+</form>

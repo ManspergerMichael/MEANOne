@@ -1,0 +1,30 @@
+<h3>Know of a pet needing a home?</h3>
+
+<div class="container">
+  <form (submit)="create($event)">
+    <label for="name">Pet Name:</label><br>
+    <input type="text" name="pet.name" [(ngModel)]="pet.name"><br>
+    <label for="type">Pet Type:</label><br>
+    <input type="text" name="pet.type" [(ngModel)]="pet.type"><br>
+    <label for="description">Description:</label><br>
+    <input type="text" name="pet.description" [(ngModel)]="pet.description"><br>
+    <label>Skills:</label><br>
+    <label for="skill1">Skill 1:</label>
+    <input type="text" name="pet.skill1" [(ngModel)]="pet.skill1"><br>
+    <label for="skill2">Skill 2:</label>
+    <input type="text" name="pet.skill2" [(ngModel)]="pet.skill2"><br>
+    <label for="skill3">Skill 3:</label>
+    <input type="text" name="pet.skill3" [(ngModel)]="pet.skill3"><br>
+    <input type="submit" value="Add pet">
+    <button [routerLink]="['/pets']">Cancel</button>
+    
+  </form>
+</div>
+
+<div *ngIf="messages">
+  <ul>
+    <li *ngFor="let message of messages">
+      {{message}}
+    </li>
+  </ul>
+</div>
